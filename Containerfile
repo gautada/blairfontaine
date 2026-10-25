@@ -16,12 +16,12 @@ LABEL org.opencontainers.image.license="Liscense"
 # ╭――――――――――――――――――╮
 # │ PACKAGES         │
 # ╰――――――――――――――――――╯
-# hadolint ignore=DL3016
-# RUN apt-get update \
-#  && apt-get --yes --no-install-recommends upgrade \
+hadolint ignore=DL3016
+RUN apt-get update \
+ && apt-get --yes --no-install-recommends upgrade \
 #  && apt-get install --yes --no-install-recommends 
-#  && apt-get clean \
-#  && rm -rf /var/lib/apt/lists/*
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 # ╭――――――――――――――――――――╮
 # │ USER               │
